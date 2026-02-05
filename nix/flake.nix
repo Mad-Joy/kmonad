@@ -95,7 +95,7 @@
           supportedCompilers));
 
       overlays.default = final: prev: {
-        kmonad = self.packages.${prev.system}.default;
+        kmonad = self.packages.${prev.stdenv.hostPlatform.system}.default;
       };
 
       nixosModules.default = { ... }: {
