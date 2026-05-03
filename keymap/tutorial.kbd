@@ -143,7 +143,7 @@
   KMonad will then wait for it to connect and on disconnect will wait for it again
   to reconnect. Without this or with `:ignore-missing false` KMonad will not start
   if the device is not connected and will close as soon as it is disconnected.
-  (unreleased)
+  (since 0.4.5)
 
   If the '/dev/input' directory does for any reason not exists (i.e. maybe in the
   initramfs) it could be due to the 'evdev' kernel module not being loaded.
@@ -267,12 +267,12 @@
   keycode or have the same keycode multiple times on the same keyboard. In such
   cases large chunks of whitespace may be more confusing then a placeholder
   button. If you further want to specify which button this placeholder refers
-  to, you can use an alias (see below). (unreleased)
+  to, you can use an alias (see below). (since 0.4.5)
 
   Instead of keycodes directly you can also use an alias (see `defalias`).
   The syntax for aliases is the same as described in `deflayer`. Keep in mind
   that buttons, which won't work if you place them in `defsrc` directly, will
-  also not work if you use them via an alias. (unreleased)
+  also not work if you use them via an alias. (since 0.4.5)
 
   Most keycodes should be obvious. If you are unsure, check
   './src/KMonad/Keyboard/Keycode.hs'. Every Keycode has a name corresponding to
@@ -315,7 +315,7 @@
   these buttons, to keep the actual `deflayer` statements orderly.
 
   A `defalias` can contain any number of aliases, and it can refer backwards or
-  forwards (unreleased) to layers or other aliases without issue. Though you may not create
+  forwards (since 0.4.5) to layers or other aliases without issue. Though you may not create
   cyclic aliases.
 
   Here we define a few aliases, but we will define more later. Notice that we
